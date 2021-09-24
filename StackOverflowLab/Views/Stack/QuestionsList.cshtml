@@ -1,0 +1,54 @@
+﻿@model List<Questions>
+
+@{
+    ViewData["Title"] = "QuestionsList";
+}
+
+<h1>Questions List</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Posted date</th>
+            <th>Status (1 unsolved, 2 solved)</th>
+            <th>Title</th>
+            <th>Username</th>
+            <th>Category</th>
+            <th>Details</th>
+        </tr>
+
+
+    </thead>
+
+    <tbody>
+        @foreach (Questions quest in Model)
+        {
+
+
+            <tr>
+                <td>@quest.ID</td>
+                <td>@quest.Posted</td>
+                <td>@quest.Status</td>
+                <td>@quest.Title</td>
+                <td>@quest.Username</td>
+                <td>@quest.Category</td>
+                <td>@quest.Detail</td>
+
+
+
+
+
+
+
+
+
+            </tr>
+        }
+
+
+
+
+
+
+    </tbody>
+</table>

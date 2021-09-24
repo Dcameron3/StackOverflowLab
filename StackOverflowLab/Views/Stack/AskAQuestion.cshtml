@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "AskAQuestion";
+}
+
+<h1>Ask A Question!</h1>
+
+<form method="post" action="/Stack/SaveQuestion">
+    
+    Username: <input class="form-control" type="text" name="Username" /><br />
+    Title: <input class="form-control" type="text" name="Title" /><br />
+    What is your question?: <input class="form-control" type="text" name="Detail" /><br />
+    Posted date: <input class="form-control" type="datetime-local" name="Posted" /><br />
+    Category: <input class="form-control" type="text" name="Category" /><br />
+    Tags: <input class="form-control" type="text" name="Tags" /><br />
+    Status (must be 1 or 2): <input class="form-control" type="text" name="Status" /><br />
+
+    <input type="submit" value="Save" />
+
+
+
+</form>
+

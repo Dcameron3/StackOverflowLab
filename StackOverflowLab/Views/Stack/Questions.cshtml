@@ -1,0 +1,25 @@
+﻿@model QuestionAnswer
+@{
+    ViewData["Title"] = "Questions";
+}
+
+<h1>Answers for question @Model.question.ID</h1>
+
+@foreach (Answers answer in Model.answers)
+{
+    @answer.ID
+    @answer.Username
+    @answer.Detail
+    @answer.QuestionID
+    @answer.Posted
+    @answer.Upvotes
+
+    <a asp-action="Delete" asp-route-prodid="@answer.ID" class="btn btn-danger">Delete</a>
+    <a asp-action="Edit" asp-route-prodid="@answer.ID" class="btn btn-secondary">Edit</a>
+
+}
+
+
+
+
+
